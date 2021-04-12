@@ -1,6 +1,6 @@
 {
   "name": "reducers-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reducers Creator is an awesome tiny javascript package that allows you to easily and intuitively create reducer functions. Mainly used to create redux reducers.",
   "license": "MIT",
   "homepage": "https://github.com/ruben-arushanyan/reducers-creator",
