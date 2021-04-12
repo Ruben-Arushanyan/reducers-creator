@@ -6,18 +6,13 @@
 ## Description
 **`Reducers Creator`** is an awesome tiny javascript package that allows you to easily and intuitively create reducer functions. Mainly used to create redux reducers. See: [Redux Cool](https://github.com/ruben-arushanyan/redux-cool)
 
-
-<hr>
-
 ## Installation
 
 ```bash
 npm install reducers-creator
 ```
-<hr/>
 
 ## Getting Started
-<br/>
 
 Create a file named `src/accountReducer.js`
 
@@ -32,7 +27,7 @@ const initialState = {
 }
 
 const reducerTree = {
-	PROFILE: {
+    PROFILE: {
         SET: (state, action) => {
             const [data] = action.args
             state.profile.data = data
