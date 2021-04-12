@@ -55,21 +55,21 @@ As you can see in the example above, we create an **`accountReducer`** by callin
 
 - **`"ACCOUNT"`** : It's the **name** of the reducer, it can be any `String`
 - **`initialState`** : It's the **initial state** of the reducer, it can be any `Object`
-- **`reducerTree`** : It's an `Object` *(can have any deep and nested structure)* that intuitively and readable ways, defines `handler functions` for reducer. `Handler functions` as an argument take `state` and `action` and update the state, it automatically uses the [immer library](https://immerjs.github.io/immer/) to do **immutable updates** with normal mutative code, like `state.profile.data.email = email`, not need to manually do immutable updates and return the result. If you are not familiar with the [immer library](https://immerjs.github.io/immer/), please look at it is very important.
+- **`reducerTree`** : It's an `Object` *(can have any deep and nested structure)* that intuitively and in readible ways, defines `handler functions` for reducer. `Handler functions` as an argument take `state` and `action` and update the state. It automatically uses the [immer library](https://immerjs.github.io/immer/) to do **immutable updates** with normal mutative code, like `state.profile.data.email = email`. There is no need to manually do immutable updates and return the result. If you are not familiar with the [immer library](https://immerjs.github.io/immer/), please look at it, it is very important.
 
 As a result, we get the **`accountReducer`** function, which can handle the following type of actions:
 - types: `"PROFILE/SET"` or `"ACCOUNT/PROFILE/SET"`
 - types: `"PROFILE/UPDATE_EMAIL"` or `"ACCOUNT/PROFILE/UPDATE_EMAIL"`
 - types: `"CLEAR"` or `"ACCOUNT/CLEAR"`
 
-As you can see, each handler can work with **two** types of actions, one consisting of the path described in *reducerTree*, the other adding the reducer name from the beginning like `"CLEAR"` and `"ACCOUNT/CLEAR"`. That is the most important and useful feature of this library.
+As you can see, each handler can work with **two** types of actions, one consisting of the path described in *reducerTree*, the second is the same as the first type plus the reducer name that should be added from the beginning like `"CLEAR"` and `"ACCOUNT/CLEAR"`. That is the most important and useful feature of this library.
 ### In both cases (`"CLEAR"` and `"ACCOUNT/CLEAR"`), the **CLEAR** handler is called in the **accountReducer**, but when we have multiple reducers that have the **CLEAR** handler and we need to clear the state of all reducers, we must use `"CLEAR"` action type, but if we need to delete only the **ACCOUNT** reducer state we must use the `"ACCOUNT/CLEAR"` action type.
 
 <br/>
 
-Now for the test, you can use [Redux](https://github.com/ruben-arushanyan/redux-cool), but in this doc's we will create a custom `createStore` function for testing.
+Now for the test, you can use [Redux](https://github.com/ruben-arushanyan/redux-cool), but in this doc, we will create a custom `createStore` function for testing.
 
-For easily creating actions please install [Actions Creator](https://github.com/ruben-arushanyan/actions-creator) library
+To easily create actions, please install [Actions Creator](https://github.com/ruben-arushanyan/actions-creator) library
 ```bash
 npm install actions-creator
 ```
@@ -146,7 +146,7 @@ console.log(store.getState())
 
 - **`name`** \<String> **name** of the reducer, it can be any `String`
 - **`initialState`** \<Object> **initial state** of the reducer, it can be any `Object`
-- **`reducerTree`** \<Object> object *(can have any deep and nested structure)* that intuitively and readable ways, defines `handler functions` for reducer. `Handler functions` as an argument take `state` and `action` and update the state, it automatically uses the [immer library](https://immerjs.github.io/immer/) to do **immutable updates** with normal mutative code, like `state.profile.data.email = email`, not need to manually do immutable updates and return the result. If you are not familiar with the [immer library](https://immerjs.github.io/immer/), please look at it is very important.
+- **`reducerTree`** \<Object> object *(can have any deep and nested structure)* that intuitively and in readible ways, defines `handler functions` for reducer. `Handler functions` as an argument take `state` and `action` and update the state. It automatically uses the [immer library](https://immerjs.github.io/immer/) to do **immutable updates** with normal mutative code, like `state.profile.data.email = email`. There is no need to manually do immutable updates and return the result. If you are not familiar with the [immer library](https://immerjs.github.io/immer/), please look at it, it is very important.
 
 <hr/>
 
