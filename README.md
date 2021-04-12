@@ -38,7 +38,7 @@ const reducerTree = {
         }
     },
     CLEAR: (state, action) => {
-            state.profile.data = null
+        state.profile.data = null
     }
 }
 
@@ -82,7 +82,7 @@ import actionsCreator from "actions-creator"
 
 // Store Creator Function
 function createStore(reducer) {
-    let prevState = undefined
+    let prevState
     let currentState = reducer()
     return {
         dispatch(action) {
