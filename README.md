@@ -22,8 +22,8 @@ import reducersCreator from "reducers-creator"
 
 const initialState = {
     profile: {
-		data: null
-	}
+        data: null
+    }
 }
 
 const reducerTree = {
