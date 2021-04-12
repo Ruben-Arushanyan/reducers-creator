@@ -1,0 +1,37 @@
+{
+  "name": "reducers-creator",
+  "version": "1.0.0",
+  "description": "Reducers Creator is an awesome tiny javascript package that allows you to easily and intuitively create reducer functions. Mainly used to create redux reducers.",
+  "license": "MIT",
+  "homepage": "https://github.com/ruben-arushanyan/reducers-creator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruben-arushanyan/reducers-creator"
+  },
+  "bugs": "https://github.com/ruben-arushanyan/reducers-creator/issues",
+  "keywords": [
+    "reducers-creator",
+    "reducer",
+    "redux",
+    "redux-reducer",
+    "immer",
+    "immutable",
+    "javascript"
+  ],
+  "author": "Ruben Arushanyan <ruben.arushanyan24@gmail.com> (https://github.com/ruben-arushanyan)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "publishConfig": {
+    "registry": "https://registry-url"
+  },
+  "npmName": "reducers-creator",
+  "devDependencies": {
+    "actions-creator": "^1.0.1",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "immer": "^9.0.1"
+  }
+}
