@@ -4,11 +4,15 @@
   "description": "Reducers Creator is an awesome tiny javascript package that allows you to easily and intuitively create reducer functions. Mainly used to create redux reducers.",
   "license": "MIT",
   "homepage": "https://github.com/ruben-arushanyan/reducers-creator",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ruben-arushanyan/reducers-creator"
   },
-  "bugs": "https://github.com/ruben-arushanyan/reducers-creator/issues",
+  "bugs": {
+    "url": "https://github.com/ruben-arushanyan/reducers-creator/issues",
+    "email": "ruben.arushanyan24@gmail.com"
+  },
   "keywords": [
     "reducers-creator",
     "reducer",
@@ -18,20 +22,36 @@
     "immutable",
     "javascript"
   ],
-  "author": "Ruben Arushanyan <ruben.arushanyan24@gmail.com> (https://github.com/ruben-arushanyan)",
-  "main": "src/index.js",
+  "author": {
+    "name": "Ruben Arushanyan",
+    "email": "ruben.arushanyan24@gmail.com",
+    "url": "https://www.linkedin.com/in/ruben-arushanyan-42bba9235/"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/Ruben-Arushanyan"
+  },
   "scripts": {
-    "test": "jest"
+    "build": "node scripts/build.js",
+    "test": "npm run to-pack --if-present; node scripts/test.js",
+    "to-pack": "npm run build --if-present; node scripts/to-pack.js",
+    "to-npm-publish": "npm run to-pack --if-present; node scripts/to-npm-publish.js"
   },
-  "publishConfig": {
-    "registry": "https://registry-url"
-  },
-  "npmName": "reducers-creator",
+  "packableFiles": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist/."
+  ],
   "devDependencies": {
-    "actions-creator": "^1.0.1",
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "actions-creator": "^1.1.0",
     "jest": "^26.6.3"
   },
   "dependencies": {
     "immer": "^9.0.1"
-  }
+  },
+  "sideEffects": false
 }

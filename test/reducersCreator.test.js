@@ -11,7 +11,7 @@
 ////////////////////////// TEST ////////////////////////////
 
 const actionsCreator = require('actions-creator')
-const reducersCreator = require('../src')
+const reducersCreator = require('../.packed')
 
 const initialState = {
     profile: {

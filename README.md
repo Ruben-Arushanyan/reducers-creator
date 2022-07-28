@@ -148,13 +148,10 @@ console.log(store.getState())
 - **`initialState`** \<Object> **initial state** of the reducer, it can be any `Object`
 - **`reducerTree`** \<Object> object *(can have any deep and nested structure)* that intuitively and in readible ways, defines `handler functions` for reducer. `Handler functions` as an argument take `state` and `action` and update the state. It automatically uses the [immer library](https://immerjs.github.io/immer/) to do **immutable updates** with normal mutative code, like `state.profile.data.email = email`. There is no need to manually do immutable updates and return the result. If you are not familiar with the [immer library](https://immerjs.github.io/immer/), please look at it, it is very important.
 
-<hr/>
 
-## Maintainers
+## Authors
 
 - [Ruben Arushanyan](https://github.com/ruben-arushanyan)
 
-<hr/>
-
 ## License
-[MIT](https://github.com/ruben-arushanyan/reducers-creator/blob/master/LICENSE)
+[MIT License](https://github.com/ruben-arushanyan/reducers-creator/blob/master/LICENSE)
