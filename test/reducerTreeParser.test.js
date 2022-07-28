@@ -8,7 +8,7 @@
 
 ////////////////////////// TEST ////////////////////////////
 
-const reducerTreeParser = require('../src/reducerTreeParser.js')
+const reducerTreeParser = require('../.packed/reducerTreeParser.js')
 
 const f1 = () => 1
 const f2 = () => 2
